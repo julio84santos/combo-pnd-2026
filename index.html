@@ -15,8 +15,10 @@
      ========================================================== -->
 <script>
 window.PND_CONFIG = {
-  // Checkout da SUPER OFERTA (11 pecas, R$ 19,90):
-  superOferta: "https://pay.hotmart.com/C106997454E",
+  // Checkout da SUPER OFERTA (11 pecas, R$ 19,90).
+  // Os parametros off= e checkoutMode= servem o checkout customizado COM order bump.
+  // Sem eles a Hotmart entrega o checkout padrao, SEM o bump.
+  superOferta: "https://pay.hotmart.com/C106997454E?off=wp1wypbq&checkoutMode=10",
 
   // Checkout do DOWNSELL (4 pecas, R$ 7,90):
   downsell: "https://pay.hotmart.com/S106967791M",
