@@ -16,12 +16,12 @@
 <script>
 window.PND_CONFIG = {
   // Checkout da SUPER OFERTA (11 pecas, R$ 19,90).
-  // Os parametros off= e checkoutMode= servem o checkout customizado COM order bump.
-  // Sem eles a Hotmart entrega o checkout padrao, SEM o bump.
-  superOferta: "https://pay.hotmart.com/C106997454E?off=wp1wypbq&checkoutMode=10",
+  // O order bump ("Treino extra") e configurado dentro do proprio checkout na Wiapy,
+     entao o link nao precisa de parametros extras.
+  superOferta: "https://pay.wiapy.com/yLHwtgJKQpdI",
 
   // Checkout do DOWNSELL (4 pecas, R$ 7,90):
-  downsell: "https://pay.hotmart.com/S106967791M",
+  downsell: "https://pay.wiapy.com/X9g7r048aV66",
 
   // Data e hora da prova:
   dataProva: "2026-09-20T13:00:00-03:00"
@@ -204,7 +204,7 @@ footer{background:#08201d;color:#8ba39f;padding:34px 0;font-size:.8rem;text-alig
       <p class="sub">pagamento único &middot; acesso imediato &middot; sem mensalidade</p>
       <a href="#" class="btn js-checkout">QUERO O MÉTODO COMPLETO &rarr;</a>
       <p class="trustline">
-        Compra segura pela Hotmart &middot; Download na hora<br>
+        Compra segura pela Wiapy &middot; Download na hora<br>
         7 dias de garantia incondicional
       </p>
     </div>
@@ -522,7 +522,7 @@ footer{background:#08201d;color:#8ba39f;padding:34px 0;font-size:.8rem;text-alig
 
   function abrir(url, valor, nome){
     if(!url){
-      alert('O checkout ainda nao foi configurado. Cole o link da Hotmart em PND_CONFIG.superOferta dentro do index.html.');
+      alert('O checkout ainda nao foi configurado. Cole o link da Wiapy em PND_CONFIG.superOferta dentro do index.html.');
       return;
     }
     if (window.fbq) fbq('track','InitiateCheckout',{value:valor,currency:'BRL',content_name:nome});
